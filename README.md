@@ -1,10 +1,10 @@
 # 🏦 Bank Marketing Campaign - Term Deposit Prediction
 
-A Machine Learning project to predict whether a customer will subscribe to a term deposit based on marketing call data. Built as part of DS675 at NJIT.
+A Machine Learning project that predicts whether a customer will subscribe to a term deposit, based on previous marketing campaign data. Developed for DS675 at NJIT.
 
 ## 📁 Project Structure
 
-📦Bank Campaign Response System/
+📦 Bank Campaign Response System/
 ├── final.ipynb
 ├── train.csv
 ├── test.csv
@@ -13,70 +13,63 @@ A Machine Learning project to predict whether a customer will subscribe to a ter
 │ ├── target_distribution.png
 │ └── feature_distributions.png
 
-
 ## 🧠 Objective
 
-To use historical marketing data from a Portuguese bank to predict customer responses and improve the efficiency of future campaigns. Only ~11% of previous campaigns were successful — highlighting the need for better targeting using machine learning.
+To optimize direct marketing campaigns by identifying clients likely to subscribe to term deposits using machine learning models and predictive analytics.
 
-## 🧪 Dataset
+## 📊 Dataset
 
 - **Source:** UCI Machine Learning Repository  
-- **Size:** 45,211 entries  
-- **Features:** 16 input features + 1 binary target
+- **Instances:** 45,211 clients  
+- **Features:** 16 (client demographics, campaign info, call logs)  
+- **Target:** Binary (Subscribed: Yes/No)
 
-### Features Include:
-- Client demographics: `age`, `job`, `marital`, `education`
-- Financial data: `balance`, `loan`, `housing`
-- Call data: `duration`, `day`, `month`, `campaign`, `pdays`, `previous`
+## 🧪 Exploratory Data Analysis
 
-## 📊 EDA Highlights
+- Strong class imbalance (88% NO vs 12% YES)
+- Moderate correlation between `duration`, `previous` and target
+- Visuals are stored in the `public/` folder
 
-- **Class Imbalance:** Majority class is “No” (~88%)
-- **Correlations:** Low correlation among most features, but `duration` and `previous` are moderately correlated
-- Visuals available in `public/` folder
+## 🤖 Models Used
 
-## ⚙️ Models Used
-
-- Logistic Regression  
-- SVM  
-- Random Forest  
-- XGBoost  
-- Neural Network  
+- Logistic Regression
+- SVM
+- Random Forest
+- XGBoost
+- Neural Network
 
 ### 📈 Best Performing Model
+
 **Random Forest**
-- Accuracy: 98%
-- Precision: 95%
-- Recall: 89%
-- F1 Score: 92%
+- Accuracy: 98%  
+- Precision: 95%  
+- Recall: 89%  
+- F1 Score: 92%  
 
 ## 🧮 Evaluation Metrics
 
-- Accuracy, Precision, Recall, F1 Score
-- AUC-ROC for model discrimination
-- SHAP values for model interpretability (future work)
+- Accuracy, Precision, Recall, F1 Score  
+- AUC-ROC  
+- SHAP (planned for future analysis)
 
 ## 🚀 Future Work
 
-- Use of SMOTE for class imbalance
-- Deploying with Streamlit or Flask
-- SHAP/PFI for feature importance analysis
+- Handle class imbalance using SMOTE
+- Deploy model via Streamlit or Flask
+- Visualize model explanations using SHAP
 
-## 👨‍💻 Authors
+## 👨‍💻 Author
 
 - Nikhil Yarra  
-- Vishnu Sunil  
-- Ahmeduddin Yasar Mohammed  
-- Saitej Deep Kumar Chowdary Bodapati
 
 ## 📸 Visualizations
 
-Stored in `public/` folder:
+Found in `public/`:
 - `correlation_matrix.png`
 - `target_distribution.png`
 - `feature_distributions.png`
 
 ---
 
-Feel free to fork or contribute!
+Built with ❤️ using Python, Scikit-Learn, and Jupyter.
 
